@@ -17,9 +17,14 @@ Output
 ****************
 """
 
-A = input()
-length_A = len(A)
+# Read input values and convert them to integers
+t, c, r = map(int, input().split())
 
-print('*' * (length_A + 4))
-print('* ' + A + ' *')
-print('*' * (length_A + 4))
+# Calculate the maximum fuel that can be pumped within the given time
+max_fuel = t * r
+
+# Check if the maximum fuel is greater than or equal to the tank capacity
+if max_fuel >= c:
+    print("yes")  # The tank can be filled up within the time allowed
+else:
+    print("no")  # The tank cannot be filled up within the time allowed
